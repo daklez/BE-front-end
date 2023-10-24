@@ -1,0 +1,403 @@
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+
+}
+
+#header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 0rem 2rem;
+  padding-top: 0.1rem;
+  width: 100vw;
+  /* height: 10vh; */
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: white;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+#header-nav {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#header-nav i{
+  font-size: 0.7rem;
+  padding-left: 0.3rem;
+}
+
+#header-login-signin {
+  width: 20%;
+  /* position: relative;
+  top: -3px; */
+  max-width: 11.5rem;
+  align-self: center;
+}
+
+#header img {
+  width: 4rem;
+  height: auto;
+}
+
+#header a {
+  text-decoration: none;
+  color: black;
+  
+}
+
+#header p {
+  margin: 0;
+  cursor: default;
+  padding: 1.5rem 0;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+
+#header a:hover {
+  color: brown;
+}
+
+/* #header a[href^="/"] {
+  padding: 0;
+} */
+
+#header a[href^="/signin"] {
+  border: 1px solid rgb(68, 68, 68);
+  width: 48%;
+  padding: 0.3rem;
+
+  margin-right: 0.1rem;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.2s ease-out;
+  /* border-bottom-left-radius: 50%; */
+}
+
+#header a[href^="/signin"]:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  /* font-weight: bold; */
+
+}
+
+#header a[href^="/login"] {
+  border: 1px solid rgb(168, 168, 0);
+  width: 48%;
+  padding: 0.3rem;
+  /* margin: 0; */
+  margin-left: 0.1rem;
+  /* width: 6rem; */
+  display: inline-block;
+  text-align: center;
+  /* border-bottom-right-radius: 50%; */
+  background-color: rgb(168, 168, 0);
+  color: rgb(253, 253, 253);
+  transition: all 0.2s ease-out;
+}
+
+#header a[href^="/login"]:hover {
+  background-color: rgb(124, 124, 1);
+  /* padding: 0.5rem 1rem; */
+  /* font-weight: bold; */
+  border: none;
+
+}
+
+#header .drop-down-hidden {
+  width: 100%;
+  /* left: 0; */
+  display: flex;
+  align-content: center;
+  padding: 2rem 0 ;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  background-color: lightgrey;
+  transition:  height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out, font-size 0.5s ease-out;
+}
+
+#header .drop-down-hidden p {
+  transition: all 0.5s ease-out;
+}
+
+
+
+
+#header .hidden-extension {
+  width: 100%;
+  left: 0;
+  display: flex;
+  padding: 2rem 0 ;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  background-color: lightgrey;
+  transition:  height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out, font-size 0.5s ease-out;
+}
+
+
+
+#header .hidden-extension a {
+  padding: 0.1rem 0;
+  display: block;
+}
+
+#header .drop-down-hidden a {
+  display: block;
+  /* margin: 0.5rem 0; */
+  padding: 0.1rem 0;
+  font-weight: 400;
+}
+
+#header .drop-down-hidden p {
+  font-weight: bold;
+  padding: 0.2rem 0;
+}
+
+#header .hidden-extension p {
+  font-weight: bold;
+  padding: 0.2rem 0;
+}
+
+
+
+#header .drop-down-right-border {
+  border-right: 2px solid rgb(178, 177, 177);
+  padding-right: 2rem;
+}
+
+#header .drop-down-left-border {
+  padding-left: 2rem;
+}
+
+#profile-header-user i.fa-circle-user {
+  font-size: 2.5rem;
+  color: gray;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+#profile-header-user {
+  align-self: center;
+  position: relative;
+}
+
+#profile-header-user #profile-header-right-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  width: max-content;
+  background-color: lightgrey;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  z-index: 5;
+  transition:  height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+#profile-header-user li {
+  padding: 1rem ;
+  text-align: center;
+  text-align: left;
+  border-bottom: 1px solid rgb(221, 190, 18);
+}
+
+#profile-header-user li:last-child {
+  border-bottom: none;
+}
+
+#profile-header-user a:hover {
+  text-decoration: underline;
+}
+
+#profile-header-user ul i {
+
+  font-size: 1.3rem;
+  color: black;
+  width: 2rem;
+}
+
+#main {
+  margin: 0 auto;
+  margin-top: 10vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+main #jumbotron{
+  width: 100%;
+  height: 80vh;
+  background-image: url("https://images.pexels.com/photos/714256/pexels-photo-714256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  text-align: center;
+  box-shadow: inset 0 0 0 1000px rgba(219, 217, 217, 0.5);
+}
+
+main #jumbotron h1 {
+  font-size: 1.8rem;
+  padding-top: 5rem;
+  font-weight:500;
+}
+
+main #jumbotron #be-decoration {
+  background-color: black;
+  height: 0.2rem;
+  width: 5rem;
+  margin: 0 auto;
+}
+
+main #jumbotron h2 {
+  padding-top: 2rem;
+  font-size: 3rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main #jumbotron h3 {
+  padding-top: 5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main #home-about {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main #home-about h2 {
+  max-width: 300px;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+main #home-about h2 span {
+  color: rgb(167, 145, 3);
+}
+
+main #home-about p{
+  max-width: 400px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-bottom: 5rem;
+}
+
+main #home-about a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(3, 175, 175);
+  padding: 0.5rem;
+ 
+}
+
+main #home-about a:hover{
+  background-color: rgb(2, 155, 155);
+  text-decoration: underline;
+}
+
+
+main #home-about img {
+  height: 100vh;
+}
+
+main #home-we-invest {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+main .home-we-invest-card {
+  display: flex;
+}
+
+main .home-we-invest-card div {
+  max-width: 300px;
+}
+
+main .home-we-invest-card img {
+  height: 40vh;
+}
+
+
+
+
+#footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items:flex-end;
+  background-color: rgb(221, 190, 18);
+  padding-top: 1rem;
+}
+
+footer img {
+  width: 7rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+footer i {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+footer h3 {
+  font-size: 1.5rem;
+}
+
+footer hr {
+  border: 1px solid black;
+  margin: 0;
+  height: 1px;
+}
+
+footer #footer-1 {
+  max-width: 23%;
+  border-right: 1px solid;
+  padding-right: 1.5rem;
+}
+
+
+footer #footer-1 a{
+  display: inline;
+}
+
+footer #footer-2-1 {
+  display: flex;
+  justify-content: center;
+}
+
+footer #footer-2-1 div {
+  margin: 2rem;
+}
+
+
+
+
+
+
+
+
+

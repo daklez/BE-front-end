@@ -1,0 +1,497 @@
+/* #profile-background {
+    background-color: rgb(216, 216, 216);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+
+} */
+
+#profile-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+    padding-top: 0.1rem;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgb(0, 0, 0);
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  }
+
+  #profile-header img {
+    width: 4rem;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  #profile-header-right i {
+    font-size: 2.5rem;
+    color: gray;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  #profile-header-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  #profile-header-right .fa-bell{
+    font-size: 1.5rem;
+    color: rgb(221, 190, 18);
+  }
+
+
+
+  #profile-header-right-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    width: max-content;
+    background-color: rgb(236, 236, 236);
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+    z-index: 5;
+    transition:  height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+  }
+
+  #profile-header-right li {
+    padding: 1rem ;
+    text-align: center;
+    text-align: left;
+    border-bottom: 1px solid rgb(221, 190, 18);
+  }
+
+  #profile-header ul li:last-child {
+    border-bottom: none;
+  }
+
+  #profile-header-right a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    
+  }
+
+  #profile-header-right a:hover {
+    text-decoration: underline;
+  }
+
+  #profile-header-right ul i {
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+    color: black;
+    width: 2rem;
+}
+
+  #profile-aside {
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    padding: 1rem;
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(204, 204, 204);
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  }
+
+  #profile-aside h2 {
+    /* font-size: 1.1rem; */
+    padding: 1rem 0;
+    border-top: 0.3rem double rgb(0, 0, 0);
+    border-bottom: 0.3rem double rgb(0, 0, 0);
+    color: rgb(150, 130, 0);
+    cursor: default;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+
+  #profile-aside h2 span {
+    color: black;
+  }
+
+  /* #profile-aside-id {
+    font-size: 0px;
+    transition: all 0.5s ease-in-out;
+  } */
+
+  #profile-aside-id {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: rgb(133, 127, 92);
+    transition: all 0.5s ease-out;
+    font-size: 0.75rem;
+    opacity: 0;
+    cursor: default;
+  }
+
+  #profile-aside-id:hover {
+    color: rgb(150, 130, 0);
+    opacity: 1;
+    
+  }
+
+  #profile-aside i {
+    margin-right: calc(0.5rem + 1vw);
+    width: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #profile-aside a {
+    padding: 0.8rem 1.3rem ;
+    margin-top: 1rem;
+    /* border: 1px solid rgb(120, 120, 120); */
+    display: block;
+    border-radius: 3rem;
+    text-decoration: none;
+    color: black;
+    /* font-weight: 400; */
+    
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, padding-left 0.5s ease-out;
+  }
+
+  #profile-aside a:hover {
+    color: rgb(150, 130, 0);
+    background-color: rgb(171, 171, 171);
+    /* font-size: 1.1rem; */
+    padding-left: 1rem;
+    font-weight: 500;
+    -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.2);
+  }
+
+#profile-aside .active {
+  color: rgb(150, 130, 0);
+  /* font-size: 1.1rem; */
+  padding-left: 1rem;
+  font-weight:500;
+  /* border-bottom: 0.3rem solid rgb(215, 141, 13); */
+  /* border: 0.2rem solid rgb(255, 255, 255); */
+  /* border-left: 0.5rem dashed rgb(216, 166, 1); */
+  /* border-right: 0.3rem dashed rgb(216, 166, 1); */
+  background-color: rgb(171, 171, 171);
+  /* text-align: center; */
+  -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+
+/* #profile-aside-support:hover {
+  border-bottom: 0.3rem solid whitesmoke;
+} */
+  
+
+#profile-main {
+  position: absolute;
+  margin-left: 15%;
+  width: 80%;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  background-color: rgb(225, 225, 225);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  min-height: 100vh;
+}
+
+.section-title {
+
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-top: 0.3rem double rgb(0, 0, 0);
+  border-bottom: 0.3rem double rgb(0, 0, 0);
+  color: rgb(150, 130, 0);
+  cursor: default;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+
+
+.money-move-form {
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  /* margin-bottom: 2rem; */
+}
+
+.money-move-form label {
+  display: block;
+}
+
+.money-move-form input[type="submit"] {
+  display: block;
+}
+
+.history {
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(204, 204, 204);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+.history #history-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid;
+ }
+
+
+ .history #history-header p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+ }
+
+ .history #history-header p:hover {
+  color: rgb(150, 130, 0);
+ }
+ .history #history-header i {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+ }
+
+ .history #history-filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+ }
+ .history #history-filters input[type="search"] {
+  margin-left: 0.5rem;
+ }
+
+.history table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  
+ }
+
+ .history table thead {
+  background-color: rgb(150, 130, 0);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+ }
+
+ .history table th,
+ .history table td {
+  padding: 0.3rem;
+  
+ }
+
+
+
+ .history table td {
+  font-size: 0.9rem;
+ }
+
+ .history table th{
+  font-size: 0.8rem;
+ }
+
+ .history .sort-arrows i{
+  display: inline-block;
+
+ }
+
+ .history table th i {
+  cursor: pointer;
+  font-size: 0.7rem;
+ 
+ }
+
+.history table tr {
+  text-align: center;
+  position: relative;
+ }
+
+ .history table tbody tr:nth-child(odd) {
+  background-color: rgb(173, 173, 173);
+ }
+
+ .wd-history-id {
+  width: 6rem;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+ }
+
+ .wd-history-id:hover {
+  cursor: pointer;
+  /* white-space: normal; */
+  /* overflow: auto; */
+  width: max-content;
+  /* display: block; */
+  text-overflow:unset;
+  /* width: max-content; */
+  /* white-space: normal; */
+  position: absolute;
+  /* left: 0; */
+  /* transform: translateX(-16%); */
+  z-index: 2;
+  background-color: aliceblue;
+  font-size: 0.8rem;
+  display: block;
+ }
+
+ #showing-entries {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+ }
+
+ #showing-entries section {
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+ }
+
+ #showing-entries button {
+    padding: 0.2rem;
+    cursor: pointer;
+    text-align: center;
+    min-width: 5rem;
+    margin: 0 0.3rem;
+    text-align: center;
+ }
+
+ #showing-entries button .fa-chevron-left {
+  margin-right: 0.2rem;
+  font-size: 0.7rem;
+ }
+
+ #showing-entries button .fa-chevron-right {
+    margin-left: 0.2rem;
+    font-size: 0.7rem;
+   }
+
+ #deposit-hidden,
+ #withdraw-hidden {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+
+ #deposit-hidden-container,
+ #withdraw-hidden-container  {
+  background-color: white;
+  width: 60%;
+
+  position: relative;
+ }
+ #deposit-hidden .close-modal,
+ #withdraw-hidden .close-modal {
+    position: absolute;
+  font-size: 2rem;
+  right: -1.2rem;
+  top: -1.2rem;
+  cursor: pointer;
+  color: rgb(150, 130, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ #deposit-hidden .close-modal i,
+ #withdraw-hidden .close-modal i {
+  position:relative;
+ }
+
+ #deposit-form,
+ #deposit-instructions,
+ #withdraw-form{
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+ }
+ #deposit-instructions-form {
+  display:flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+#withdraw-hidden-container {
+  padding: 1rem;
+  border: 1px solid;
+}
+
+#withdraw-form {
+    width: 100%;
+}
+
+/* #deposit-instructions {
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+
+} */
+
+#deposit-instructions ul {
+  margin-left: 1rem;
+}
+#deposit-instructions li {
+  margin-left: 2rem;
+}
+
+#deposit-form input[type="submit"],
+#withdraw-form input[type="submit"] {
+  padding: 0.5rem;
+}
+
+#deposit-form input[type="submit"]:disabled,
+#withdraw-form input[type="submit"]:disabled {
+  cursor: not-allowed;
+  color: rgba(255, 0, 0, 0.467);
+}
+
+ #support-form textarea {
+  resize: none;
+ }
